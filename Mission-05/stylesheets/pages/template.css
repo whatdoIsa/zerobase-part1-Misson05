@@ -1,0 +1,329 @@
+body {
+  width: 1920px;
+  height: 1024px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+
+.header {
+  position: relative;
+  left: 395px;
+}
+
+.button--category {
+  width: 110px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue-600);
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.button--category svg {
+  margin-bottom: 12px;
+}
+
+.button--category:focus-visible {
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px var(--color-red-500);
+}
+
+.button--category:hover {
+  /* .navigation__list {
+    display: block;
+  } */
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+
+.navigation {
+  width: 1020px;
+  height: 520px;
+  position: absolute;
+  left: 395px;
+  top: 116px;
+}
+
+.navigation__inner {
+  width: 540px;
+  height: 500px;
+}
+
+.hidden-navTitle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.navigation__list {
+  box-shadow: 0px 3px 3px var(--color-opacity-20);
+}
+
+.level1 {
+  /* display: none; */
+  width: 180px;
+  height: 500px;
+  position: relative;
+  padding-left: 25px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.level1 > li:first-child:hover,
+.level1 > li:first-child:active,
+.level1 > li:first-child:focus,
+.level2 > li:first-child:hover,
+.level2 > li:first-child:active,
+.level2 > li:first-child:focus {
+  background-image: url('../../assets/icon/more-right-active.svg');
+  background-position: 130px 11px;
+  background-repeat: no-repeat;
+}
+
+.active:hover,
+.active:focus {
+  font-weight: 700;
+  color: var(--color-blue-600);
+}
+
+.navigation__list li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.navigation__list i {
+  margin-right: 8px;
+}
+
+.navigation__list .level2 {
+  width: 180px;
+  height: 500px;
+  display: none;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  padding-left: 25px;
+}
+
+.navigation__list .level2 .level3 {
+  width: 180px;
+  height: 500px;
+  display: none;
+  position: absolute;
+  left: 180px;
+  top: 0;
+}
+
+.navigation__list::after,
+.level2::after {
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 500px;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  background-color: var(--color-gray-200);
+}
+
+.navigation__inner .is--active.level2,
+.navigation__inner .is--active.level3 {
+  display: block;
+}
+
+.navigation__inner .level1 li a:first-child:hover,
+.navigation__inner .level1 li a:first-child:active,
+.navigation__inner .level1 li a:first-child:focus {
+  color: var(--color-blue-600);
+  font-weight: 700;
+}
+
+.navigation__inner .is--active a:first-child:hover,
+.navigation__inner .is--active a:first-child:active,
+.navigation__inner .is--active a:first-child:focus {
+  color: var(--color-blue-600);
+  font-weight: 700;
+}
+
+.level1 li:last-child img {
+  position: relative;
+  top: -1px;
+  left: 4px;
+}
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+
+.footer {
+  width: 1920px;
+  height: 349px;
+  margin-top: 40px;
+}
+
+.footer-nav {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-gray-200);
+}
+
+.footer-nav p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+  padding: 1px 14px 6px;
+}
+
+.footer-nav .bold {
+  font-weight: 700;
+}
+
+.footer-nav .divider {
+  position: relative;
+  top: 10px;
+  color: var(--color-gray-800);
+}
+
+.all-info {
+  width: 100%;
+  height: 207px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.all-info .logo {
+  width: 176px;
+  height: 40px;
+  position: relative;
+  top: 14px;
+  background-image: url('../../assets/logo/logo-mono.svg');
+  background-repeat: no-repeat;
+}
+
+.all-info h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.all-info .management {
+  /* width: 265px;
+  height: 143px; */
+  margin-left: 63px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.all-info .management p {
+  margin-bottom: 12px;
+}
+
+.all-info .customer-service {
+  width: 296px;
+  margin-left: 62px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.all-info .customer-service p {
+  margin-bottom: 12px;
+}
+
+.all-info .customer-service p:first-of-type {
+  display: inline-block;
+  padding-right: 15px;
+  border-right: 1px solid var(--color-gray-800);
+}
+
+.all-info .customer-service span {
+  padding-left: 11px;
+}
+
+.all-info .customer-service .tel {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.all-info .bank-info {
+  margin-left: 62px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-800);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.footer-last {
+  width: 100%;
+  height: 102px;
+  background-color: var(--color-gray-900);
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--color-gray-200);
+}
+
+.footer-last .copyRight {
+  margin: 0 auto;
+}
+
+.footer-last .sns {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 45px;
+  gap: 10px;
+}
+
+.footer-last .sns .instagram {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(
+    174.12deg,
+    #285aeb 5.61%,
+    #bc1888 22.32%,
+    #cc2366 36.16%,
+    #dc2743 51.91%,
+    #e6683c 73.38%,
+    #f09433 91.99%
+  );
+}
